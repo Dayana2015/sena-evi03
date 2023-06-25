@@ -1,16 +1,43 @@
-//un corredor de maraton (distancia 42.195 Km) ha recorrido la carrera en 2 horas 25 minutos, 
-//se desea un algoritmo que calcule el tiempo medio en minutos por kilometros
+/*Realizar un algoritmo que muestre por pantalla la tabla de multiplicar decreciente de cualquier número,
+ingresado entre el 1 y el 10.*/
 
-var horas = 2;
-var minutos = 25;
-var distancia_km = 42.195;
+function mostrarTabla(){
+    //obtener el numero ingresado por el usuario
+    var numero= parseInt(document.getElementById("numero").value);
 
-// convertir el tiempo total de la carrera en minutos
+    //validar que el numero este dentro del rango valido
 
-var tiempo_total_minutos = horas * 60 + minutos;
+    if(isNaN(numero) || numero < 1 || numero > 10) {
+        alert("Por favor, ingrese un número válido entre 1 y 10.");
+        return;
+    }
 
-//calcular el tiempo medio por kilometro
+    //obtener el elemento de la tabla
+    var tabla = document.getElementById("tabla-multiplicar");
 
-var tiempo_medio_por_km = tiempo_total_minutos/ distancia_km;
+    //limpiar la tabla 
+    tabla.innerHTML="";
+     //generar la tabla de multiplicar decreciente
+     for (var i=10; i>= 1; i--) {
+        var resultado = numero  *  i;
 
-console.log("el tiempo medio por kilometro es de:" + tiempo_medio_por_km + "minutos"); 
+        var fila = document.createElement("tr");
+        var celdaNumero = document.createElement("td");
+        var celdaMultiplicador = document.createElement("td");
+        var celdaResultado = document.createElement("td");
+
+        celdaNumero.textContent= numero;
+        celdaMultiplicador.textContent= i;
+        celdaResultado.textContent=resultado;
+
+        fila.appendChild(celdaNumero);
+        fila.appendChild(celdaMultiplicador);
+        fila.appendChild(celdaResultado);
+
+
+        tabla.appendChild(fila);
+     }
+}
+
+
+

@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
-        <title>EVIDENCIA 3</title>
 
-    </head>
-    <body>
-        <h1>Evidencia 3</h1>
-        <script src="evidencia_03.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <title>EVIDENCIA 3</title>
+    <script src="evidencia_03.js"></script>
+
+</head>
+
+<body class="contaner">
+    <h1>TABLA DE MULTIPLICAR DECRECIENTE</h1>
+    <div>
+        <label for="numero">Ingrese un número DEL 1-10: </label>
+        <input type="number" id="numero" min="1" max="10">
+    </div>
+    <br>
+    <br>
+    <div>
+        <button onclick="mostrarTabla()">Mostrar Tabla</button>
+    </div>
+    <br>
+    <div id="tabla">
+        <h2>Tabla de multiplicar decreciente:</h2>
+        <table border="1" id="tabla-multiplicar">
+
+        </table>
+    </div>
+</body>
+
 </html>
