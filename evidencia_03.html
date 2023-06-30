@@ -11,23 +11,12 @@
 </head>
 
 <body class="contaner">
-    <h1>TABLA DE MULTIPLICAR DECRECIENTE</h1>
-    <div>
-        <label for="numero">Ingrese un número DEL 1-10: </label>
-        <input type="number" id="numero" min="1" max="10">
-    </div>
+    <h1>Determinar Año Bisiesto</h1>
+    <label for="inputYear">Año:</label>
+    <input type="number" id="inputYear" required>
     <br>
+    <button onclick="determinarAñoBisiesto()">Determinar</button>
     <br>
-    <div>
-        <button onclick="mostrarTabla()">Mostrar Tabla</button>
-    </div>
-    <br>
-    <div id="tabla">
-        <h2>Tabla de multiplicar decreciente:</h2>
-        <table border="1" id="tabla-multiplicar">
-
-        </table>
-    </div>
+    <p id="resultado"></p>
 </body>
-
 </html>
